@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1D3FAA267A5D34006B71E1 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D3FA9267A5D34006B71E1 /* Rule.swift */; };
+		8B1D3FAC267A5D59006B71E1 /* AccountFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D3FAB267A5D59006B71E1 /* AccountFieldControl.swift */; };
+		8B284851267BBE5B001A6680 /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284850267BBE5B001A6680 /* RequiredRule.swift */; };
+		8B284853267BBF14001A6680 /* MinimumLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284852267BBF14001A6680 /* MinimumLengthRule.swift */; };
+		8B284855267BC023001A6680 /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284854267BC023001A6680 /* PasswordRule.swift */; };
+		8B284857267BC193001A6680 /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284856267BC193001A6680 /* EmailRule.swift */; };
+		8B28485A267BC2ED001A6680 /* FieldValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284859267BC2ED001A6680 /* FieldValidatable.swift */; };
 		8BBD7D16267A4A2F007EF91B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD7D15267A4A2F007EF91B /* AppDelegate.swift */; };
 		8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD7D17267A4A2F007EF91B /* SceneDelegate.swift */; };
 		8BBD7D1A267A4A2F007EF91B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD7D19267A4A2F007EF91B /* ViewController.swift */; };
@@ -15,6 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B1D3FA9267A5D34006B71E1 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		8B1D3FAB267A5D59006B71E1 /* AccountFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFieldControl.swift; sourceTree = "<group>"; };
+		8B284850267BBE5B001A6680 /* RequiredRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredRule.swift; sourceTree = "<group>"; };
+		8B284852267BBF14001A6680 /* MinimumLengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthRule.swift; sourceTree = "<group>"; };
+		8B284854267BC023001A6680 /* PasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
+		8B284856267BC193001A6680 /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
+		8B284859267BC2ED001A6680 /* FieldValidatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidatable.swift; sourceTree = "<group>"; };
 		8BBD7D12267A4A2F007EF91B /* JWTAuthenticationClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWTAuthenticationClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BBD7D15267A4A2F007EF91B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8BBD7D17267A4A2F007EF91B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +49,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B28484F267BBE04001A6680 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				8B1D3FA9267A5D34006B71E1 /* Rule.swift */,
+				8B284850267BBE5B001A6680 /* RequiredRule.swift */,
+				8B284852267BBF14001A6680 /* MinimumLengthRule.swift */,
+				8B284854267BC023001A6680 /* PasswordRule.swift */,
+				8B284856267BC193001A6680 /* EmailRule.swift */,
+			);
+			path = Rules;
+			sourceTree = "<group>";
+		};
+		8B284858267BC2CD001A6680 /* FieldValidator */ = {
+			isa = PBXGroup;
+			children = (
+				8B28484F267BBE04001A6680 /* Rules */,
+				8B284859267BC2ED001A6680 /* FieldValidatable.swift */,
+			);
+			path = FieldValidator;
+			sourceTree = "<group>";
+		};
 		8BBD7D09267A4A2F007EF91B = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +89,10 @@
 		8BBD7D14267A4A2F007EF91B /* JWTAuthenticationClient */ = {
 			isa = PBXGroup;
 			children = (
+				8B284858267BC2CD001A6680 /* FieldValidator */,
 				8BBD7D29267A4B3D007EF91B /* Application */,
 				8BBD7D19267A4A2F007EF91B /* ViewController.swift */,
+				8B1D3FAB267A5D59006B71E1 /* AccountFieldControl.swift */,
 				8BBD7D23267A4A30007EF91B /* Info.plist */,
 			);
 			path = JWTAuthenticationClient;
@@ -162,9 +199,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B284855267BC023001A6680 /* PasswordRule.swift in Sources */,
+				8B284851267BBE5B001A6680 /* RequiredRule.swift in Sources */,
+				8B1D3FAC267A5D59006B71E1 /* AccountFieldControl.swift in Sources */,
 				8BBD7D1A267A4A2F007EF91B /* ViewController.swift in Sources */,
+				8B28485A267BC2ED001A6680 /* FieldValidatable.swift in Sources */,
+				8B1D3FAA267A5D34006B71E1 /* Rule.swift in Sources */,
 				8BBD7D16267A4A2F007EF91B /* AppDelegate.swift in Sources */,
+				8B284853267BBF14001A6680 /* MinimumLengthRule.swift in Sources */,
 				8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */,
+				8B284857267BC193001A6680 /* EmailRule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
