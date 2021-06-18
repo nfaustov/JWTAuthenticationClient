@@ -68,7 +68,7 @@ extension AccountFieldControl: UITextFieldDelegate {
 extension AccountFieldControl: FieldValidatable {
     var validationRules: [Rule] {
         get {
-            return rules
+            rules
         }
         set {
             rules = newValue

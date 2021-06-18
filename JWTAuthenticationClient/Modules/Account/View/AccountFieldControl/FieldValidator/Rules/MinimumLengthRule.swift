@@ -14,12 +14,10 @@ final class MinimumLengthRule: Rule {
     }
 
     func validate(value: String) -> Bool {
-        return value.count > minLength
+        value.count > minLength
     }
 
     func errorMessage() -> String {
-        return message
+        message
     }
 }
-
-
