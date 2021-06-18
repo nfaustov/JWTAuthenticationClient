@@ -11,8 +11,11 @@ protocol SignUpModule: AnyObject {
 }
 
 protocol SignUpView: View {
+    func updateInvalidFields()
+    func updateProgress(isCompleted: Bool)
 }
 
 protocol SignUpPresentation: AnyObject {
-    func switchToLoginScreen() 
+    func switchToLoginScreen()
+    func validate(usingFields fields: [FieldValidatable], completion: (Bool) -> Void)
 }

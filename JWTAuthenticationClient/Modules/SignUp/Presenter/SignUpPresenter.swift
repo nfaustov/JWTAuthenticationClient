@@ -15,4 +15,20 @@ extension SignUpPresenter: SignUpPresentation {
     func switchToLoginScreen() {
         coordinator?.routeToLogin()
     }
+
+    func validate(usingFields fields: [FieldValidatable], completion: (Bool) -> Void) {
+        var isValid = true
+
+        fields.forEach { field in
+            field.validationRules.forEach { rule in
+                isValid = rule.validate(value: field.validationText)
+            }
+        }
+
+        view?.updateInvalidFields()
+
+        if isValid {
+            //
+        }
+    }
 }

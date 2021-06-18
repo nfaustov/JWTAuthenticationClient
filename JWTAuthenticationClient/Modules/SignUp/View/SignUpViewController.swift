@@ -16,14 +16,56 @@ final class SignUpViewController: UIViewController {
     let passwordAccountControl = AccountFieldControl()
 
     let signUpButton = UIButton()
+
     let statusLabel = UILabel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        nameAccountControl.configure(
+            title: "Name",
+            validationRules: [RequiredRule()],
+            contentType: .username
+        )
+        emailAccountControl.configure(
+            title: "Email",
+            validationRules: [RequiredRule(), EmailRule()],
+            contentType: .emailAddress
+        )
+        passwordAccountControl.configure(
+            title: "Password",
+            validationRules: [RequiredRule(), PasswordRule()],
+            contentType: .password
+        )
+    }
+
+    @objc private func signUp() {
+        presenter.validate(usingFields: [nameAccountControl, emailAccountControl, passwordAccountControl]) { isValid in
+            if isValid {
+                // Proceed with signup API
+            }
+        }
+    }
+
+    @objc private func switchToLogin() {
+        presenter.switchToLoginScreen()
     }
 }
 
 extension SignUpViewController: SignUpView {
+    func updateInvalidFields() {
+        nameAccountControl.setErrorMessage()
+        emailAccountControl.setErrorMessage()
+        passwordAccountControl.setErrorMessage()
+    }
+
+    func updateProgress(isCompleted: Bool) {
+        signUpButton.isEnabled = isCompleted
+        signUpButton.setTitle(isCompleted ? "" : "", for: .normal)
+        if isCompleted {
+            nameAccountControl.clearFieldText()
+            emailAccountControl.clearFieldText()
+            passwordAccountControl.clearFieldText()
+        }
+    }
 }

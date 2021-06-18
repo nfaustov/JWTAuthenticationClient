@@ -56,6 +56,10 @@ final class AccountFieldControl: UIControl {
         setRules(validationRules)
         inputTextField.delegate = self
     }
+
+    func clearFieldText() {
+        inputTextField.text = ""
+    }
 }
 
 extension AccountFieldControl: UITextFieldDelegate {
@@ -79,12 +83,12 @@ extension AccountFieldControl: FieldValidatable {
         inputTextField.text ?? ""
     }
 
-    private func setRules(_ rules: [Rule]) {
+    func setRules(_ rules: [Rule]) {
         validationRules.removeAll()
         validationRules.append(contentsOf: rules)
     }
 
-    private func setErrorMessage() {
+    func setErrorMessage() {
         errorLabel.text = rules
             .filter { !$0.validate(value: validationText) }
             .first
