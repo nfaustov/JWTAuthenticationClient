@@ -24,14 +24,25 @@ final class AccountCoordinator: Coordinator {
         module.coordinator = self
         navigationController.pushViewController(viewController, animated: true)
     }
+
+    func didFinishAccount() {
+        parentCoordinator?.childDidFinish(self)
+//        parentCoordinator?.routeToHome()
+    }
 }
 
 extension AccountCoordinator: LoginSubscription {
     func routeToLogin() {
+        let (viewController, module) = modules.login()
+        module.coordinator = self
+        navigationController.show(viewController, sender: nil)
     }
 }
 
 extension AccountCoordinator: SignUpSubscription {
     func routeToSignUp() {
+        let (viewController, module) = modules.signUp()
+        module.coordinator = self
+        navigationController.show(viewController, sender: nil)
     }
 }

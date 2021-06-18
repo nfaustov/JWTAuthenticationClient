@@ -25,6 +25,12 @@ final class MainCoordinator: Coordinator {
         module.coordinator = self
     }
 
+    func childDidFinish(_ child: Coordinator?) {
+        for (index, coordinator) in childCoordinators.enumerated() where coordinator === child {
+            childCoordinators.remove(at: index)
+        }
+    }
+
     private func accountCoordinator() {
         let child = AccountCoordinator(navigationController: navigationController, modules: modules)
         child.parentCoordinator = self

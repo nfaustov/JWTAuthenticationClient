@@ -7,13 +7,12 @@
 
 protocol WindowModule: AnyObject {
     var coordinator: (LoginSubscription & HomeSubscription)? { get set }
-    var didFinish: (() -> Void)? { get set }
 }
 
 protocol WindowView: View {
 }
 
 protocol WindowPresentation: AnyObject {
-    func showLogin()
-    func showHome()
+    func showLoginScreen()
+    func showHomeScreen()
 }

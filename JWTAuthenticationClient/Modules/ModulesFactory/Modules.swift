@@ -10,7 +10,7 @@ import UIKit
 protocol Modules {
     func window(frame: CGRect) -> (UIWindow, WindowModule)
     func account() -> (UIViewController, AccountModule)
-    func login()
-    func signUp()
+    func login() -> (UIViewController, LoginModule)
+    func signUp() -> (UIViewController, SignUpModule)
     func home()
 }

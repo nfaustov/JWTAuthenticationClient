@@ -22,10 +22,18 @@ final class ModulesFactory: Modules {
         return (view, presenter)
     }
 
-    func login() {
+    func login() -> (UIViewController, LoginModule) {
+        let view = LoginViewController()
+        let presenter = LoginPresenter(view: view)
+
+        return (view, presenter)
     }
 
-    func signUp() {
+    func signUp() -> (UIViewController, SignUpModule) {
+        let view = SignUpViewController()
+        let presenter = SignUpPresenter(view: view)
+
+        return (view, presenter)
     }
 
     func home() {

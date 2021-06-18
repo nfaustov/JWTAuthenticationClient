@@ -7,16 +7,14 @@
 
 final class WindowPresenter<V>: Presenter<V>, WindowModule where V: WindowView {
     weak var coordinator: (LoginSubscription & HomeSubscription)?
-
-    var didFinish: (() -> Void)?
 }
 
 extension WindowPresenter: WindowPresentation {
-    func showLogin() {
+    func showLoginScreen() {
         coordinator?.routeToLogin()
     }
 
-    func showHome() {
+    func showHomeScreen() {
         coordinator?.routeToHome()
     }
 }

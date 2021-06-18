@@ -8,6 +8,9 @@
 import UIKit
 
 final class LoginViewController: UIViewController {
+    typealias PresenterType = LoginPresentation
+    var presenter: PresenterType!
+
     let emailAccountControl = AccountFieldControl()
     let passwordAccountControl = AccountFieldControl()
 
@@ -19,4 +22,7 @@ final class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
+
+extension LoginViewController: LoginView {
 }

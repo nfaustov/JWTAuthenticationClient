@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6AC267D17CA00DA9630 /* LoginPresenter.swift */; };
+		8B0AF6AF267D17E000DA9630 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6AE267D17E000DA9630 /* LoginModule.swift */; };
+		8B0AF6B3267D1C4D00DA9630 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */; };
+		8B0AF6B5267D1CBA00DA9630 /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6B4267D1CBA00DA9630 /* SignUpPresenter.swift */; };
 		8B1D3FAA267A5D34006B71E1 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D3FA9267A5D34006B71E1 /* Rule.swift */; };
 		8B1D3FAC267A5D59006B71E1 /* AccountFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1D3FAB267A5D59006B71E1 /* AccountFieldControl.swift */; };
 		8B284851267BBE5B001A6680 /* RequiredRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284850267BBE5B001A6680 /* RequiredRule.swift */; };
@@ -41,6 +45,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B0AF6AC267D17CA00DA9630 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		8B0AF6AE267D17E000DA9630 /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
+		8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
+		8B0AF6B4267D1CBA00DA9630 /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		8B1D3FA9267A5D34006B71E1 /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
 		8B1D3FAB267A5D59006B71E1 /* AccountFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFieldControl.swift; sourceTree = "<group>"; };
 		8B284850267BBE5B001A6680 /* RequiredRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequiredRule.swift; sourceTree = "<group>"; };
@@ -87,6 +95,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B0AF6AA267D17AC00DA9630 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B28485B267BE69F001A6680 /* LoginViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B0AF6AB267D17B700DA9630 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AF6AC267D17CA00DA9630 /* LoginPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8B0AF6B0267D1C3400DA9630 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B28485E267BE785001A6680 /* SignUpViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B0AF6B1267D1C3A00DA9630 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8B0AF6B4267D1CBA00DA9630 /* SignUpPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		8B28484F267BBE04001A6680 /* Rules */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,7 +151,9 @@
 		8B28485D267BE76C001A6680 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				8B28485B267BE69F001A6680 /* LoginViewController.swift */,
+				8B0AF6AA267D17AC00DA9630 /* View */,
+				8B0AF6AB267D17B700DA9630 /* Presenter */,
+				8B0AF6AE267D17E000DA9630 /* LoginModule.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -119,7 +161,9 @@
 		8B284860267BE942001A6680 /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
-				8B28485E267BE785001A6680 /* SignUpViewController.swift */,
+				8B0AF6B0267D1C3400DA9630 /* View */,
+				8B0AF6B1267D1C3A00DA9630 /* Presenter */,
+				8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -373,9 +417,12 @@
 				8B284873267BF25E001A6680 /* Presenter.swift in Sources */,
 				8B284862267BE97F001A6680 /* Window.swift in Sources */,
 				8B284896267CF5FE001A6680 /* HomeCoordinator.swift in Sources */,
+				8B0AF6AF267D17E000DA9630 /* LoginModule.swift in Sources */,
 				8B284851267BBE5B001A6680 /* RequiredRule.swift in Sources */,
 				8B1D3FAC267A5D59006B71E1 /* AccountFieldControl.swift in Sources */,
 				8B28487B267BF71A001A6680 /* Coordinator.swift in Sources */,
+				8B0AF6B5267D1CBA00DA9630 /* SignUpPresenter.swift in Sources */,
+				8B0AF6B3267D1C4D00DA9630 /* SignUpModule.swift in Sources */,
 				8B28486D267BF1D4001A6680 /* View.swift in Sources */,
 				8B284884267BFAFF001A6680 /* LoginSubscription.swift in Sources */,
 				8B28487D267BF772001A6680 /* MainCoordinator.swift in Sources */,
@@ -392,6 +439,7 @@
 				8B28485F267BE785001A6680 /* SignUpViewController.swift in Sources */,
 				8BBD7D16267A4A2F007EF91B /* AppDelegate.swift in Sources */,
 				8B284871267BF22D001A6680 /* Interactor.swift in Sources */,
+				8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */,
 				8B284853267BBF14001A6680 /* MinimumLengthRule.swift in Sources */,
 				8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */,
 				8B284857267BC193001A6680 /* EmailRule.swift in Sources */,

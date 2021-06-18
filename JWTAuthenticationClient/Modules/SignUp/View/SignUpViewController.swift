@@ -8,6 +8,9 @@
 import UIKit
 
 final class SignUpViewController: UIViewController {
+    typealias PresenterType = SignUpPresentation
+    var presenter: PresenterType!
+
     let nameAccountControl = AccountFieldControl()
     let emailAccountControl = AccountFieldControl()
     let passwordAccountControl = AccountFieldControl()
@@ -20,4 +23,7 @@ final class SignUpViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+}
+
+extension SignUpViewController: SignUpView {
 }
