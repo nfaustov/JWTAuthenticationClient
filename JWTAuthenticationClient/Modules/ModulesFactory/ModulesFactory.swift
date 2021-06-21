@@ -15,13 +15,6 @@ final class ModulesFactory: Modules {
         return (view, presenter)
     }
 
-    func account() -> (UIViewController, AccountModule) {
-        let view = AccountViewController()
-        let presenter = AccountPresenter(view: view)
-
-        return (view, presenter)
-    }
-
     func login() -> (UIViewController, LoginModule) {
         let view = LoginViewController()
         let presenter = LoginPresenter(view: view)
