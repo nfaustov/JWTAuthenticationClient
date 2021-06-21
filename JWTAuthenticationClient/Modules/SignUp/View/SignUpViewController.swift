@@ -25,10 +25,6 @@ final class SignUpViewController: UIViewController {
 
         view.backgroundColor = .systemBackground
 
-        configureHierarchy()
-    }
-
-    private func configureHierarchy() {
         nameAccountControl.configure(
             title: "Name",
             validationRules: [RequiredRule()],
@@ -56,6 +52,10 @@ final class SignUpViewController: UIViewController {
         switchToLoginButton.setTitleColor(.systemGreen, for: .normal)
         switchToLoginButton.addTarget(self, action: #selector(switchToLogin), for: .touchUpInside)
 
+        configureStack()
+    }
+
+    private func configureStack() {
         let stackView = UIStackView(
             arrangedSubviews: [
                 nameAccountControl,
@@ -66,7 +66,8 @@ final class SignUpViewController: UIViewController {
                 statusLabel
             ]
         )
-        stackView.spacing = 12
+        stackView.spacing = 8
+        stackView.setCustomSpacing(4, after: passwordAccountControl)
         stackView.setCustomSpacing(4, after: signUpButton)
         stackView.axis = .vertical
         view.addSubview(stackView)
