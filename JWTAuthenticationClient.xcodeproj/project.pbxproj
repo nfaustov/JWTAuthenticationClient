@@ -269,11 +269,10 @@
 		8BBD7D14267A4A2F007EF91B /* JWTAuthenticationClient */ = {
 			isa = PBXGroup;
 			children = (
-				8B284886267BFBDB001A6680 /* AccountFieldControl */,
 				8BBD7D29267A4B3D007EF91B /* Application */,
 				8B284879267BF646001A6680 /* Coordinators */,
 				8B28486A267BF172001A6680 /* Modules */,
-				8BBD7D23267A4A30007EF91B /* Info.plist */,
+				8B284886267BFBDB001A6680 /* AccountFieldControl */,
 			);
 			path = JWTAuthenticationClient;
 			sourceTree = "<group>";
@@ -285,6 +284,7 @@
 				8BBD7D17267A4A2F007EF91B /* SceneDelegate.swift */,
 				8BBD7D1E267A4A30007EF91B /* Assets.xcassets */,
 				8BBD7D20267A4A30007EF91B /* LaunchScreen.storyboard */,
+				8BBD7D23267A4A30007EF91B /* Info.plist */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -549,7 +549,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQ6FU7ZZ8T;
-				INFOPLIST_FILE = JWTAuthenticationClient/Info.plist;
+				INFOPLIST_FILE = JWTAuthenticationClient/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -569,7 +569,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WQ6FU7ZZ8T;
-				INFOPLIST_FILE = JWTAuthenticationClient/Info.plist;
+				INFOPLIST_FILE = JWTAuthenticationClient/Application/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

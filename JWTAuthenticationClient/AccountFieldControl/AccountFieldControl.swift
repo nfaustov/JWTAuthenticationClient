@@ -38,7 +38,8 @@ final class AccountFieldControl: UIControl {
         super.init(frame: frame)
 
         let stackView = UIStackView(arrangedSubviews: [titleLabel, inputTextField, errorLabel])
-        stackView.spacing = 6
+        stackView.axis = .vertical
+        stackView.distribution = .fillEqually
         addSubview(stackView)
         let contentInsets = UIEdgeInsets(top: 4, left: 4, bottom: 4, right: 4)
         stackView.frame = bounds.inset(by: contentInsets)
