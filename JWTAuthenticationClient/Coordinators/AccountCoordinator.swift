@@ -35,7 +35,7 @@ extension AccountCoordinator: LoginSubscription {
     func routeToLogin() {
         let (viewController, module) = modules.login()
         module.coordinator = self
-        navigationController.show(viewController, sender: nil)
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }
 
@@ -43,6 +43,6 @@ extension AccountCoordinator: SignUpSubscription {
     func routeToSignUp() {
         let (viewController, module) = modules.signUp()
         module.coordinator = self
-        navigationController.show(viewController, sender: nil)
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }

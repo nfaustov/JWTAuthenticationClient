@@ -19,3 +19,10 @@ protocol LoginPresentation: AnyObject {
     func switchToSignUpScreen()
     func validate(usingFields fields: [FieldValidatable], completion: (Bool) -> Void)
 }
+
+protocol LoginInteraction: Interactor {
+    func login(email: String, password: String, completion: @escaping (Result<String, Error>) -> Void)
+}
+
+protocol LoginInteractorDelegate: AnyObject {
+}

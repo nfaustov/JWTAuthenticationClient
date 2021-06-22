@@ -24,14 +24,16 @@ final class ModulesFactory: Modules {
 
     func login() -> (UIViewController, LoginModule) {
         let view = LoginViewController()
-        let presenter = LoginPresenter(view: view)
+        let interactor = LoginInteractor()
+        let presenter = LoginPresenter(view: view, interactor: interactor)
 
         return (view, presenter)
     }
 
     func signUp() -> (UIViewController, SignUpModule) {
         let view = SignUpViewController()
-        let presenter = SignUpPresenter(view: view)
+        let interactor = SignUpInteractor()
+        let presenter = SignUpPresenter(view: view, interactor: interactor)
 
         return (view, presenter)
     }

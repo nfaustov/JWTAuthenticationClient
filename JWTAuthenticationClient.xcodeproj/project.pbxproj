@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,6 +30,15 @@
 		8B28488E267C0143001A6680 /* SignUpSubscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28488D267C0143001A6680 /* SignUpSubscription.swift */; };
 		8B284892267C0428001A6680 /* WindowModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284891267C0428001A6680 /* WindowModule.swift */; };
 		8B284896267CF5FE001A6680 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284895267CF5FE001A6680 /* HomeCoordinator.swift */; };
+		8B55C0002680FAFB00545D01 /* SignUpInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55BFFF2680FAFB00545D01 /* SignUpInteractor.swift */; };
+		8B55C0032680FC8F00545D01 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C0022680FC8F00545D01 /* LoginInteractor.swift */; };
+		8B55C0062680FEA100545D01 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C0052680FEA100545D01 /* AuthService.swift */; };
+		8B55C0082680FED500545D01 /* AuhAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C0072680FED500545D01 /* AuhAPI.swift */; };
+		8B55C00B2681000F00545D01 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8B55C00A2681000F00545D01 /* Alamofire */; };
+		8B55C00D2681003B00545D01 /* AuthHttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C00C2681003B00545D01 /* AuthHttpService.swift */; };
+		8B55C00F268100A600545D01 /* AuthHttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C00E268100A600545D01 /* AuthHttpRouter.swift */; };
+		8B55C011268100EF00545D01 /* HttpRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C010268100EF00545D01 /* HttpRouter.swift */; };
+		8B55C013268102CC00545D01 /* HttpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55C012268102CC00545D01 /* HttpService.swift */; };
 		8B6002662680F5020003EF6B /* AccountFieldControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6002652680F5020003EF6B /* AccountFieldControl.swift */; };
 		8B6002692680F5320003EF6B /* FieldValidatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6002682680F5320003EF6B /* FieldValidatable.swift */; };
 		8B60026C2680F5640003EF6B /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B60026B2680F5640003EF6B /* Rule.swift */; };
@@ -68,6 +77,14 @@
 		8B28488D267C0143001A6680 /* SignUpSubscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpSubscription.swift; sourceTree = "<group>"; };
 		8B284891267C0428001A6680 /* WindowModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowModule.swift; sourceTree = "<group>"; };
 		8B284895267CF5FE001A6680 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		8B55BFFF2680FAFB00545D01 /* SignUpInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpInteractor.swift; sourceTree = "<group>"; };
+		8B55C0022680FC8F00545D01 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		8B55C0052680FEA100545D01 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		8B55C0072680FED500545D01 /* AuhAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuhAPI.swift; sourceTree = "<group>"; };
+		8B55C00C2681003B00545D01 /* AuthHttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHttpService.swift; sourceTree = "<group>"; };
+		8B55C00E268100A600545D01 /* AuthHttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthHttpRouter.swift; sourceTree = "<group>"; };
+		8B55C010268100EF00545D01 /* HttpRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpRouter.swift; sourceTree = "<group>"; };
+		8B55C012268102CC00545D01 /* HttpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpService.swift; sourceTree = "<group>"; };
 		8B6002652680F5020003EF6B /* AccountFieldControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountFieldControl.swift; sourceTree = "<group>"; };
 		8B6002682680F5320003EF6B /* FieldValidatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldValidatable.swift; sourceTree = "<group>"; };
 		8B60026B2680F5640003EF6B /* Rule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
@@ -89,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B55C00B2681000F00545D01 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +150,7 @@
 			children = (
 				8B0AF6AA267D17AC00DA9630 /* View */,
 				8B0AF6AB267D17B700DA9630 /* Presenter */,
+				8B55C0012680FC7600545D01 /* Interactor */,
 				8B0AF6AE267D17E000DA9630 /* LoginModule.swift */,
 			);
 			path = Login;
@@ -142,6 +161,7 @@
 			children = (
 				8B0AF6B0267D1C3400DA9630 /* View */,
 				8B0AF6B1267D1C3A00DA9630 /* Presenter */,
+				8B55BFFE2680FAD800545D01 /* Interactor */,
 				8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */,
 			);
 			path = SignUp;
@@ -253,6 +273,42 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8B55BFFE2680FAD800545D01 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8B55BFFF2680FAFB00545D01 /* SignUpInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8B55C0012680FC7600545D01 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8B55C0022680FC8F00545D01 /* LoginInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		8B55C0042680FE8700545D01 /* HttpService */ = {
+			isa = PBXGroup;
+			children = (
+				8B55C0052680FEA100545D01 /* AuthService.swift */,
+				8B55C0072680FED500545D01 /* AuhAPI.swift */,
+				8B55C010268100EF00545D01 /* HttpRouter.swift */,
+				8B55C012268102CC00545D01 /* HttpService.swift */,
+			);
+			path = HttpService;
+			sourceTree = "<group>";
+		};
+		8B55C0142681F75800545D01 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8B55C00E268100A600545D01 /* AuthHttpRouter.swift */,
+				8B55C00C2681003B00545D01 /* AuthHttpService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		8B6002642680F4EC0003EF6B /* AccountFieldControl */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,6 +360,8 @@
 			children = (
 				8BBD7D29267A4B3D007EF91B /* Application */,
 				8B284879267BF646001A6680 /* Coordinators */,
+				8B55C0142681F75800545D01 /* Service */,
+				8B55C0042680FE8700545D01 /* HttpService */,
 				8B28486A267BF172001A6680 /* Modules */,
 				8B6002642680F4EC0003EF6B /* AccountFieldControl */,
 			);
@@ -339,6 +397,9 @@
 			dependencies = (
 			);
 			name = JWTAuthenticationClient;
+			packageProductDependencies = (
+				8B55C00A2681000F00545D01 /* Alamofire */,
+			);
 			productName = JWTAuthenticationClient;
 			productReference = 8BBD7D12267A4A2F007EF91B /* JWTAuthenticationClient.app */;
 			productType = "com.apple.product-type.application";
@@ -366,6 +427,9 @@
 				Base,
 			);
 			mainGroup = 8BBD7D09267A4A2F007EF91B;
+			packageReferences = (
+				8B55C0092681000F00545D01 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 8BBD7D13267A4A2F007EF91B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -415,6 +479,7 @@
 				8B284876267BF4E1001A6680 /* Modules.swift in Sources */,
 				8B6002662680F5020003EF6B /* AccountFieldControl.swift in Sources */,
 				8B284873267BF25E001A6680 /* Presenter.swift in Sources */,
+				8B55C0062680FEA100545D01 /* AuthService.swift in Sources */,
 				8B6002692680F5320003EF6B /* FieldValidatable.swift in Sources */,
 				8B284862267BE97F001A6680 /* Window.swift in Sources */,
 				8B284896267CF5FE001A6680 /* HomeCoordinator.swift in Sources */,
@@ -423,26 +488,33 @@
 				8B0AF6B5267D1CBA00DA9630 /* SignUpPresenter.swift in Sources */,
 				8B6002702680F5B30003EF6B /* MinimumLengthRule.swift in Sources */,
 				8B0AF6B3267D1C4D00DA9630 /* SignUpModule.swift in Sources */,
+				8B55C011268100EF00545D01 /* HttpRouter.swift in Sources */,
 				8B60026E2680F5900003EF6B /* RequiredRule.swift in Sources */,
 				8B28486D267BF1D4001A6680 /* View.swift in Sources */,
 				8B284884267BFAFF001A6680 /* LoginSubscription.swift in Sources */,
+				8B55C00F268100A600545D01 /* AuthHttpRouter.swift in Sources */,
 				8B28487D267BF772001A6680 /* MainCoordinator.swift in Sources */,
 				8B284878267BF527001A6680 /* ModulesFactory.swift in Sources */,
+				8B55C0002680FAFB00545D01 /* SignUpInteractor.swift in Sources */,
 				8B28488E267C0143001A6680 /* SignUpSubscription.swift in Sources */,
 				8B28488A267BFD72001A6680 /* AccountModule.swift in Sources */,
 				8B284865267BEA25001A6680 /* WindowPresenter.swift in Sources */,
 				8BBD7D1A267A4A2F007EF91B /* AccountViewController.swift in Sources */,
 				8B60026C2680F5640003EF6B /* Rule.swift in Sources */,
 				8B28488C267BFF3E001A6680 /* AccountPresenter.swift in Sources */,
+				8B55C0032680FC8F00545D01 /* LoginInteractor.swift in Sources */,
 				8B284892267C0428001A6680 /* WindowModule.swift in Sources */,
 				8B28487F267BF84D001A6680 /* AccountCoordinator.swift in Sources */,
 				8B28485F267BE785001A6680 /* SignUpViewController.swift in Sources */,
 				8BBD7D16267A4A2F007EF91B /* AppDelegate.swift in Sources */,
 				8B284871267BF22D001A6680 /* Interactor.swift in Sources */,
+				8B55C0082680FED500545D01 /* AuhAPI.swift in Sources */,
 				8B6002742680F5F00003EF6B /* PasswordRule.swift in Sources */,
 				8B6002722680F5CE0003EF6B /* EmailRule.swift in Sources */,
 				8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */,
 				8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */,
+				8B55C00D2681003B00545D01 /* AuthHttpService.swift in Sources */,
+				8B55C013268102CC00545D01 /* HttpService.swift in Sources */,
 				8B284882267BFAAF001A6680 /* HomeSubscription.swift in Sources */,
 				8B28485C267BE69F001A6680 /* LoginViewController.swift in Sources */,
 			);
@@ -640,6 +712,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8B55C0092681000F00545D01 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8B55C00A2681000F00545D01 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8B55C0092681000F00545D01 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8BBD7D0A267A4A2F007EF91B /* Project object */;
 }

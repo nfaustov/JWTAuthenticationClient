@@ -5,7 +5,7 @@
 //  Created by Nikolai Faustov on 18.06.2021.
 //
 
-final class SignUpPresenter<V>: Presenter<V>, SignUpModule where V: SignUpView {
+final class SignUpPresenter<V, I>: PresenterInteractor<V, I>, SignUpModule where V: SignUpView, I: SignUpInteraction {
     weak var coordinator: LoginSubscription?
 
     var didFinish: (() -> Void)?
