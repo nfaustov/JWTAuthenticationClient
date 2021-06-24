@@ -8,6 +8,12 @@
 import UIKit
 
 final class ModulesFactory: Modules {
+    private let dependencies: HttpServiceDependencies
+
+    init(dependencies: HttpServiceDependencies) {
+        self.dependencies = dependencies
+    }
+
     func window(frame: CGRect) -> (UIWindow, WindowModule) {
         let view = Window(frame: frame)
         let presenter = WindowPresenter(view: view)
@@ -33,6 +39,7 @@ final class ModulesFactory: Modules {
     func signUp() -> (UIViewController, SignUpModule) {
         let view = SignUpViewController()
         let interactor = SignUpInteractor()
+        interactor.authAPI = dependencies.authService
         let presenter = SignUpPresenter(view: view, interactor: interactor)
 
         return (view, presenter)

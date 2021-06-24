@@ -5,6 +5,8 @@
 //  Created by Nikolai Faustov on 18.06.2021.
 //
 
+import Alamofire
+
 protocol SignUpModule: AnyObject {
     var coordinator: LoginSubscription? { get set }
     var didFinish: (() -> Void)? { get set }
@@ -25,7 +27,7 @@ protocol SignUpInteraction: Interactor {
         username: String,
         email: String,
         password: String,
-        completion: @escaping (Result<String, Error>) -> Void
+        completion: @escaping (AuthResult<String>) -> Void
     )
 }
 

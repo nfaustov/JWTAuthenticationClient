@@ -7,5 +7,9 @@
 
 import Alamofire
 
-final class AuthHttpService {
+final class AuthHttpService: HttpService {
+    func request(_ urlRequest: URLRequestConvertible) -> DataRequest {
+        fatalError()
+    }
+    
 }

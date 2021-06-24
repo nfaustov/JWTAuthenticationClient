@@ -18,8 +18,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = scene as? UIWindowScene else { return }
 
+        let dependencies: HttpServiceDependencies = DependencyContainer()
+        let modules = ModulesFactory(dependencies: dependencies)
         let navigationController = UINavigationController()
-        let modules = ModulesFactory()
         coordinator = MainCoordinator(navigationController: navigationController, modules: modules)
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
