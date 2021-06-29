@@ -39,7 +39,6 @@ extension SignUpPresenter: SignUpPresentation {
 
     func signUp(username: String, email: String, password: String) {
         interactor.signUp(username: username, email: email, password: password)
-        view?.updateProgress(isCompleted: true)
     }
 }
 
@@ -47,11 +46,12 @@ extension SignUpPresenter: SignUpInteractorDelegate {
     func successSignUp(token: String) {
         let successText = "Sign Up is successful"
         view?.updateStatus(usingViewModel: AuthStatusViewModel(title: successText, color: StatusColor.success))
-        // TODO: Save token in data storage
+        view?.updateProgress(isCompleted: true)
         coordinator?.routeToHome()
     }
 
     func failureSignUp(error: String) {
         view?.updateStatus(usingViewModel: AuthStatusViewModel(title: error, color: StatusColor.failure))
+        view?.updateProgress(isCompleted: true)
     }
 }

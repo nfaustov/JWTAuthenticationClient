@@ -61,7 +61,7 @@ extension AuthService: AuthAPI {
                     success(token)
                 }
         } catch {
-            print("Sign up failed with error = \(error.localizedDescription)")
+            print("Sign up failed with error: \(error.localizedDescription)")
             failure("Sign up failed with error")
         }
     }
@@ -72,5 +72,34 @@ extension AuthService: AuthAPI {
         success: @escaping (String) -> Void,
         failure: @escaping (String) -> Void
     ) {
+        do {
+            try AuthHttpRouter
+                .login(AuthModel(email: email, password: password))
+                .request(usingHttpService: httpService)
+                .responseJSON { response in
+                    guard response.response?.statusCode == 200 else {
+                        if let data = response.data {
+                            do {
+                                let loginError = try JSONDecoder().decode(LoginError.self, from: data)
+                                failure(loginError.error)
+                            } catch {
+                                print("Login error: \(error)")
+                                failure("Login failed")
+                            }
+                        }
+                        return
+                    }
+
+                    guard let token = response.value as? String else {
+                        print("Login token parding failed")
+                        return
+                    }
+
+                    success(token)
+                }
+        } catch {
+            print("Login failed with error: \(error.localizedDescription)")
+            failure("Login failed with error")
+        }
     }
 }

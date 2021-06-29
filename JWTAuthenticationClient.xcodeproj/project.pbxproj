@@ -56,6 +56,7 @@
 		8BBD7D1A267A4A2F007EF91B /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BBD7D19267A4A2F007EF91B /* AccountViewController.swift */; };
 		8BBD7D1F267A4A30007EF91B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BBD7D1E267A4A30007EF91B /* Assets.xcassets */; };
 		8BBD7D22267A4A30007EF91B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BBD7D20267A4A30007EF91B /* LaunchScreen.storyboard */; };
+		8BDBD54D268BA0F8005B95D4 /* LoginError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDBD54C268BA0F8005B95D4 /* LoginError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -109,6 +110,7 @@
 		8BBD7D1E267A4A30007EF91B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8BBD7D21267A4A30007EF91B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BBD7D23267A4A30007EF91B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BDBD54C268BA0F8005B95D4 /* LoginError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +357,7 @@
 				8B9135D62683AF7200C772D5 /* AuthModel.swift */,
 				8B9135D82683FEA700C772D5 /* SignUpError.swift */,
 				8B01C08B268B4B5E00BAE0F8 /* AuthStatusViewModel.swift */,
+				8BDBD54C268BA0F8005B95D4 /* LoginError.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				8B6002742680F5F00003EF6B /* PasswordRule.swift in Sources */,
 				8B6002722680F5CE0003EF6B /* EmailRule.swift in Sources */,
 				8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */,
+				8BDBD54D268BA0F8005B95D4 /* LoginError.swift in Sources */,
 				8B9135DC2684C46500C772D5 /* DependencyContainer.swift in Sources */,
 				8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */,
 				8B55C00D2681003B00545D01 /* AuthHttpService.swift in Sources */,

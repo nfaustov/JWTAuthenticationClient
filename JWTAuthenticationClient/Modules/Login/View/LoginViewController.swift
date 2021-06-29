@@ -80,7 +80,10 @@ final class LoginViewController: UIViewController {
     @objc private func login() {
         presenter.validate(usingFields: [emailAccountControl, passwordAccountControl]) { isValid in
             if isValid {
-                // Proceed with login API
+                presenter.login(
+                    email: emailAccountControl.validationText,
+                    password: passwordAccountControl.validationText
+                )
             }
         }
     }
@@ -103,5 +106,10 @@ extension LoginViewController: LoginView {
             emailAccountControl.clearFieldText()
             passwordAccountControl.clearFieldText()
         }
+    }
+
+    func updateStatus(usingViewModel viewModel: AuthStatusViewModel) {
+        statusLabel.text = viewModel.title
+        statusLabel.textColor = viewModel.color
     }
 }

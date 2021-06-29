@@ -31,6 +31,7 @@ final class ModulesFactory: Modules {
     func login() -> (UIViewController, LoginModule) {
         let view = LoginViewController()
         let interactor = LoginInteractor()
+        interactor.authAPI = dependencies.authService
         let presenter = LoginPresenter(view: view, interactor: interactor)
 
         return (view, presenter)
