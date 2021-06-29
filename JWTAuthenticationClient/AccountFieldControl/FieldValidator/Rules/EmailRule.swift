@@ -16,7 +16,8 @@ final class EmailRule: Rule {
     }
 
     func validate(value: String) -> Bool {
-        let pattern = NSPredicate(format: "SELF MATCHES %@", EmailRule.regex)
+        let pattern = NSPredicate(format: "self matches %@", EmailRule.regex)
+
         return pattern.evaluate(with: value)
     }
 

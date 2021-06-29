@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B01C08C268B4B5E00BAE0F8 /* AuthStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B01C08B268B4B5E00BAE0F8 /* AuthStatusViewModel.swift */; };
 		8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6AC267D17CA00DA9630 /* LoginPresenter.swift */; };
 		8B0AF6AF267D17E000DA9630 /* LoginModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6AE267D17E000DA9630 /* LoginModule.swift */; };
 		8B0AF6B3267D1C4D00DA9630 /* SignUpModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B01C08B268B4B5E00BAE0F8 /* AuthStatusViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthStatusViewModel.swift; sourceTree = "<group>"; };
 		8B0AF6AC267D17CA00DA9630 /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		8B0AF6AE267D17E000DA9630 /* LoginModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModule.swift; sourceTree = "<group>"; };
 		8B0AF6B2267D1C4D00DA9630 /* SignUpModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModule.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 			children = (
 				8B9135D62683AF7200C772D5 /* AuthModel.swift */,
 				8B9135D82683FEA700C772D5 /* SignUpError.swift */,
+				8B01C08B268B4B5E00BAE0F8 /* AuthStatusViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -520,6 +523,7 @@
 				8B60026E2680F5900003EF6B /* RequiredRule.swift in Sources */,
 				8B28486D267BF1D4001A6680 /* View.swift in Sources */,
 				8B284884267BFAFF001A6680 /* LoginSubscription.swift in Sources */,
+				8B01C08C268B4B5E00BAE0F8 /* AuthStatusViewModel.swift in Sources */,
 				8B55C00F268100A600545D01 /* AuthHttpRouter.swift in Sources */,
 				8B28487D267BF772001A6680 /* MainCoordinator.swift in Sources */,
 				8B284878267BF527001A6680 /* ModulesFactory.swift in Sources */,

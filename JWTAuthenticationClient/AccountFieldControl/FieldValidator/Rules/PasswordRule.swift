@@ -16,7 +16,7 @@ final class PasswordRule: Rule {
     }
 
     func validate(value: String) -> Bool {
-        let pattern = NSPredicate(format: "SELF MATCHES %$", PasswordRule.regex)
+        let pattern = NSPredicate(format: "self matches %@", PasswordRule.regex)
 
         return pattern.evaluate(with: value)
     }

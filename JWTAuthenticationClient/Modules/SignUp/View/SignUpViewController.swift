@@ -94,7 +94,11 @@ final class SignUpViewController: UIViewController {
     @objc private func signUp() {
         presenter.validate(usingFields: [nameAccountControl, emailAccountControl, passwordAccountControl]) { isValid in
             if isValid {
-                // Proceed with signup API
+                presenter.signUp(
+                    username: nameAccountControl.validationText,
+                    email: emailAccountControl.validationText,
+                    password: passwordAccountControl.validationText
+                )
             }
         }
     }
@@ -113,11 +117,16 @@ extension SignUpViewController: SignUpView {
 
     func updateProgress(isCompleted: Bool) {
         signUpButton.isEnabled = isCompleted
-        signUpButton.setTitle(isCompleted ? "" : "", for: .normal)
+        signUpButton.setTitle(isCompleted ? "Sign Up" : "Signing Up...", for: .normal)
         if isCompleted {
             nameAccountControl.clearFieldText()
             emailAccountControl.clearFieldText()
             passwordAccountControl.clearFieldText()
         }
+    }
+
+    func updateStatus(usingViewModel viewModel: AuthStatusViewModel) {
+        statusLabel.text = viewModel.title
+        statusLabel.textColor = viewModel.color
     }
 }

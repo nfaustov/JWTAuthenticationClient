@@ -15,7 +15,10 @@ enum AuthHttpRouter {
 
 extension AuthHttpRouter: HttpRouter {
     var baseURL: String {
+        // Test
         "http://127.0.0.1:8080/users"
+        // Prod
+        // ""
     }
 
     var path: String {

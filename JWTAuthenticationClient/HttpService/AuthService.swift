@@ -65,7 +65,7 @@ extension AuthService: AuthAPI {
             failure("Sign up failed with error")
         }
     }
-    
+
     func login(
         email: String,
         password: String,
@@ -73,5 +73,4 @@ extension AuthService: AuthAPI {
         failure: @escaping (String) -> Void
     ) {
     }
-    
 }

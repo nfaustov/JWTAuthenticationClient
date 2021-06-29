@@ -32,3 +32,5 @@ extension LoginPresenter: LoginPresentation {
         }
     }
 }
+
+extension LoginPresenter: LoginInteractorDelegate { }
