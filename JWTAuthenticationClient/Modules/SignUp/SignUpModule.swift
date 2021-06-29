@@ -5,8 +5,6 @@
 //  Created by Nikolai Faustov on 18.06.2021.
 //
 
-import Alamofire
-
 protocol SignUpModule: AnyObject {
     var coordinator: (LoginSubscription & HomeSubscription)? { get set }
     var didFinish: (() -> Void)? { get set }

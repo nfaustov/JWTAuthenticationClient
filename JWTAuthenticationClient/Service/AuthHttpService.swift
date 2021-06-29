@@ -9,6 +9,6 @@ import Alamofire
 
 final class AuthHttpService: HttpService {
     func request(_ urlRequest: URLRequestConvertible) -> DataRequest {
-        fatalError()
+        Session.default.request(urlRequest).validate(statusCode: 200..<400)
     }
 }

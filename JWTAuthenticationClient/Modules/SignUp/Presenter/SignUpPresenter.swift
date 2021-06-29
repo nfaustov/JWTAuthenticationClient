@@ -45,7 +45,9 @@ extension SignUpPresenter: SignUpPresentation {
 
 extension SignUpPresenter: SignUpInteractorDelegate {
     func successSignUp(token: String) {
-        view?.updateStatus(usingViewModel: AuthStatusViewModel(title: token, color: StatusColor.success))
+        let successText = "Sign Up is successful"
+        view?.updateStatus(usingViewModel: AuthStatusViewModel(title: successText, color: StatusColor.success))
+        // TODO: Save token in data storage
         coordinator?.routeToHome()
     }
 
