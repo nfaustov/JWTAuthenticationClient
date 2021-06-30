@@ -102,4 +102,42 @@ extension AuthService: AuthAPI {
             failure("Login failed with error")
         }
     }
+
+    func validate(
+        token: String,
+        success: @escaping (User) -> Void,
+        failure: @escaping (String) -> Void
+    ) {
+        do {
+            try AuthHttpRouter
+                .validate(token: token)
+                .request(usingHttpService: httpService)
+                .responseJSON { response in
+                    guard response.response?.statusCode == 200 else {
+                        if let data = response.data {
+                            do {
+                                let logoutError = try JSONDecoder().decode(ValidationError.self, from: data)
+                                failure(logoutError.reason)
+                            } catch {
+                                print("Token validation failed: \(error.localizedDescription)")
+                                failure("Token validation failed")
+                            }
+                        }
+                        return
+                    }
+
+                    if let userData = response.data {
+                        do {
+                            let user = try JSONDecoder().decode(User.self, from: userData)
+                            success(user)
+                        } catch {
+                            failure("Token validation failed")
+                        }
+                    }
+                }
+        } catch {
+            print("Token validation failed with error: \(error.localizedDescription)")
+            failure("Token validation failed with error")
+        }
+    }
 }

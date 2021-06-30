@@ -10,6 +10,7 @@ final class SignUpInteractor {
     weak var delegate: Delegate?
 
     var authAPI: AuthAPI?
+    var authDatabase: AuthDB?
 }
 
 extension SignUpInteractor: SignUpInteraction {

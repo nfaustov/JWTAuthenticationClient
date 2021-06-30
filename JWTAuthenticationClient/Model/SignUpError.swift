@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SignUpError: Codable, Error {
+struct SignUpError: Codable {
     enum CodingKeys: String, CodingKey {
         case validationErrors = "validation_errors"
     }

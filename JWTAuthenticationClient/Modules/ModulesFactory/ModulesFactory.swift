@@ -8,9 +8,9 @@
 import UIKit
 
 final class ModulesFactory: Modules {
-    private let dependencies: HttpServiceDependencies
+    private let dependencies: (HttpServiceDependencies & DatabaseDependencies)
 
-    init(dependencies: HttpServiceDependencies) {
+    init(dependencies: (HttpServiceDependencies & DatabaseDependencies) ) {
         self.dependencies = dependencies
     }
 
@@ -32,6 +32,7 @@ final class ModulesFactory: Modules {
         let view = LoginViewController()
         let interactor = LoginInteractor()
         interactor.authAPI = dependencies.authService
+        interactor.authDatabase = dependencies.authDatabase
         let presenter = LoginPresenter(view: view, interactor: interactor)
 
         return (view, presenter)
@@ -41,6 +42,7 @@ final class ModulesFactory: Modules {
         let view = SignUpViewController()
         let interactor = SignUpInteractor()
         interactor.authAPI = dependencies.authService
+        interactor.authDatabase = dependencies.authDatabase
         let presenter = SignUpPresenter(view: view, interactor: interactor)
 
         return (view, presenter)

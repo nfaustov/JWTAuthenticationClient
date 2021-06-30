@@ -11,6 +11,7 @@ import Foundation
 enum AuthHttpRouter {
     case login(AuthModel)
     case signUp(AuthModel)
+    case validate(token: String)
 }
 
 extension AuthHttpRouter: HttpRouter {
@@ -27,6 +28,8 @@ extension AuthHttpRouter: HttpRouter {
             return "login"
         case .signUp:
             return "create"
+        case .validate:
+            return "me"
         }
     }
 
@@ -34,6 +37,8 @@ extension AuthHttpRouter: HttpRouter {
         switch self {
         case .login, .signUp:
             return .post
+        case .validate:
+            return .get
         }
     }
 
@@ -43,6 +48,10 @@ extension AuthHttpRouter: HttpRouter {
             return [
                 "Content-Type": "application/json; charset=UTF-8"
             ]
+        case .validate(let token):
+            return [
+                "Authorization": "Bearer \(token)"
+            ]
         }
     }
 
@@ -50,6 +59,8 @@ extension AuthHttpRouter: HttpRouter {
         switch self {
         case .login(let user), .signUp(let user):
             return try JSONEncoder().encode(user)
+        case .validate:
+            return nil
         }
     }
 }

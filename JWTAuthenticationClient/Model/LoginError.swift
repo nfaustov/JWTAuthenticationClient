@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct LoginError: Codable, Error {
+struct LoginError: Codable {
     let error: String
 }

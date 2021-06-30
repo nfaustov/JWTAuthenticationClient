@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = scene as? UIWindowScene else { return }
 
-        let dependencies: HttpServiceDependencies = DependencyContainer()
+        let dependencies: (HttpServiceDependencies & DatabaseDependencies) = DependencyContainer()
         let modules = ModulesFactory(dependencies: dependencies)
         let navigationController = UINavigationController()
         coordinator = MainCoordinator(navigationController: navigationController, modules: modules)
@@ -26,5 +26,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
         coordinator?.start()
+    }
+
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        let dataStoreManager = UserAccessDatabase()
+        dataStoreManager.saveContext()
     }
 }
