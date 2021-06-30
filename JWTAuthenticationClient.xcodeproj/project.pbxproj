@@ -16,6 +16,11 @@
 		8B14D975268CB01400A695E4 /* DatabaseDependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14D974268CB01400A695E4 /* DatabaseDependencies.swift */; };
 		8B14D977268CB71500A695E4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14D976268CB71500A695E4 /* User.swift */; };
 		8B14D979268CBABB00A695E4 /* ValidationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B14D978268CBABB00A695E4 /* ValidationError.swift */; };
+		8B1FBF48268CD4E000A61F93 /* HomeModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBF47268CD4E000A61F93 /* HomeModule.swift */; };
+		8B1FBF4A268CD7AD00A61F93 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBF49268CD7AD00A61F93 /* HomeViewController.swift */; };
+		8B1FBF4C268CD7F200A61F93 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBF4B268CD7F200A61F93 /* HomePresenter.swift */; };
+		8B1FBF4E268CD8BA00A61F93 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBF4D268CD8BA00A61F93 /* HomeInteractor.swift */; };
+		8B1FBF51268CE77500A61F93 /* UserModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B1FBF4F268CE77500A61F93 /* UserModel.xcdatamodeld */; };
 		8B28485C267BE69F001A6680 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28485B267BE69F001A6680 /* LoginViewController.swift */; };
 		8B28485F267BE785001A6680 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B28485E267BE785001A6680 /* SignUpViewController.swift */; };
 		8B284862267BE97F001A6680 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B284861267BE97F001A6680 /* Window.swift */; };
@@ -51,8 +56,7 @@
 		8B6002702680F5B30003EF6B /* MinimumLengthRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B60026F2680F5B30003EF6B /* MinimumLengthRule.swift */; };
 		8B6002722680F5CE0003EF6B /* EmailRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6002712680F5CE0003EF6B /* EmailRule.swift */; };
 		8B6002742680F5F00003EF6B /* PasswordRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6002732680F5F00003EF6B /* PasswordRule.swift */; };
-		8B8DB5D4268C9FF300501752 /* UserToken.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DB5D2268C9FF300501752 /* UserToken.xcdatamodeld */; };
-		8B8DB5D6268CA13100501752 /* UserAccessDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DB5D5268CA13100501752 /* UserAccessDatabase.swift */; };
+		8B8DB5D6268CA13100501752 /* UserDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DB5D5268CA13100501752 /* UserDatabase.swift */; };
 		8B8DB5D8268CA28200501752 /* UserToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B8DB5D7268CA28200501752 /* UserToken.swift */; };
 		8B9135D72683AF7200C772D5 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9135D62683AF7200C772D5 /* AuthModel.swift */; };
 		8B9135D92683FEA700C772D5 /* SignUpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9135D82683FEA700C772D5 /* SignUpError.swift */; };
@@ -76,6 +80,11 @@
 		8B14D974268CB01400A695E4 /* DatabaseDependencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseDependencies.swift; sourceTree = "<group>"; };
 		8B14D976268CB71500A695E4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8B14D978268CBABB00A695E4 /* ValidationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationError.swift; sourceTree = "<group>"; };
+		8B1FBF47268CD4E000A61F93 /* HomeModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModule.swift; sourceTree = "<group>"; };
+		8B1FBF49268CD7AD00A61F93 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8B1FBF4B268CD7F200A61F93 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		8B1FBF4D268CD8BA00A61F93 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		8B1FBF50268CE77500A61F93 /* UserModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = UserModel.xcdatamodel; sourceTree = "<group>"; };
 		8B28485B267BE69F001A6680 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8B28485E267BE785001A6680 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8B284861267BE97F001A6680 /* Window.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
@@ -110,8 +119,7 @@
 		8B60026F2680F5B30003EF6B /* MinimumLengthRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthRule.swift; sourceTree = "<group>"; };
 		8B6002712680F5CE0003EF6B /* EmailRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailRule.swift; sourceTree = "<group>"; };
 		8B6002732680F5F00003EF6B /* PasswordRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRule.swift; sourceTree = "<group>"; };
-		8B8DB5D3268C9FF300501752 /* TokenUser.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TokenUser.xcdatamodel; sourceTree = "<group>"; };
-		8B8DB5D5268CA13100501752 /* UserAccessDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccessDatabase.swift; sourceTree = "<group>"; };
+		8B8DB5D5268CA13100501752 /* UserDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDatabase.swift; sourceTree = "<group>"; };
 		8B8DB5D7268CA28200501752 /* UserToken.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserToken.swift; sourceTree = "<group>"; };
 		8B9135D62683AF7200C772D5 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
 		8B9135D82683FEA700C772D5 /* SignUpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpError.swift; sourceTree = "<group>"; };
@@ -171,6 +179,41 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		8B1FBF43268CD4A300A61F93 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8B1FBF44268CD4BD00A61F93 /* View */,
+				8B1FBF45268CD4C300A61F93 /* Presenter */,
+				8B1FBF46268CD4CC00A61F93 /* Interactor */,
+				8B1FBF47268CD4E000A61F93 /* HomeModule.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8B1FBF44268CD4BD00A61F93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B1FBF49268CD7AD00A61F93 /* HomeViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B1FBF45268CD4C300A61F93 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				8B1FBF4B268CD7F200A61F93 /* HomePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		8B1FBF46268CD4CC00A61F93 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				8B1FBF4D268CD8BA00A61F93 /* HomeInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 		8B28485D267BE76C001A6680 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +255,7 @@
 				8B284885267BFBAB001A6680 /* Account */,
 				8B284860267BE942001A6680 /* SignUp */,
 				8B28485D267BE76C001A6680 /* Login */,
+				8B1FBF43268CD4A300A61F93 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -368,9 +412,9 @@
 		8B8DB5D1268C9FB000501752 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				8B8DB5D2268C9FF300501752 /* UserToken.xcdatamodeld */,
-				8B8DB5D5268CA13100501752 /* UserAccessDatabase.swift */,
+				8B8DB5D5268CA13100501752 /* UserDatabase.swift */,
 				8B14D972268CA46800A695E4 /* AuthDB.swift */,
+				8B1FBF4F268CE77500A61F93 /* UserModel.xcdatamodeld */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -558,6 +602,7 @@
 				8B284884267BFAFF001A6680 /* LoginSubscription.swift in Sources */,
 				8B01C08C268B4B5E00BAE0F8 /* AuthStatusViewModel.swift in Sources */,
 				8B55C00F268100A600545D01 /* AuthHttpRouter.swift in Sources */,
+				8B1FBF4A268CD7AD00A61F93 /* HomeViewController.swift in Sources */,
 				8B28487D267BF772001A6680 /* MainCoordinator.swift in Sources */,
 				8B284878267BF527001A6680 /* ModulesFactory.swift in Sources */,
 				8B55C0002680FAFB00545D01 /* SignUpInteractor.swift in Sources */,
@@ -571,11 +616,14 @@
 				8B28488C267BFF3E001A6680 /* AccountPresenter.swift in Sources */,
 				8B14D977268CB71500A695E4 /* User.swift in Sources */,
 				8B9135D92683FEA700C772D5 /* SignUpError.swift in Sources */,
+				8B1FBF4C268CD7F200A61F93 /* HomePresenter.swift in Sources */,
 				8B8DB5D8268CA28200501752 /* UserToken.swift in Sources */,
-				8B8DB5D4268C9FF300501752 /* UserToken.xcdatamodeld in Sources */,
+				8B1FBF51268CE77500A61F93 /* UserModel.xcdatamodeld in Sources */,
 				8B55C0032680FC8F00545D01 /* LoginInteractor.swift in Sources */,
 				8B284892267C0428001A6680 /* WindowModule.swift in Sources */,
 				8B28487F267BF84D001A6680 /* AccountCoordinator.swift in Sources */,
+				8B1FBF4E268CD8BA00A61F93 /* HomeInteractor.swift in Sources */,
+				8B1FBF48268CD4E000A61F93 /* HomeModule.swift in Sources */,
 				8B28485F267BE785001A6680 /* SignUpViewController.swift in Sources */,
 				8BBD7D16267A4A2F007EF91B /* AppDelegate.swift in Sources */,
 				8B284871267BF22D001A6680 /* Interactor.swift in Sources */,
@@ -585,7 +633,7 @@
 				8B14D975268CB01400A695E4 /* DatabaseDependencies.swift in Sources */,
 				8B6002722680F5CE0003EF6B /* EmailRule.swift in Sources */,
 				8B0AF6AD267D17CA00DA9630 /* LoginPresenter.swift in Sources */,
-				8B8DB5D6268CA13100501752 /* UserAccessDatabase.swift in Sources */,
+				8B8DB5D6268CA13100501752 /* UserDatabase.swift in Sources */,
 				8BDBD54D268BA0F8005B95D4 /* LoginError.swift in Sources */,
 				8B9135DC2684C46500C772D5 /* DependencyContainer.swift in Sources */,
 				8BBD7D18267A4A2F007EF91B /* SceneDelegate.swift in Sources */,
@@ -809,13 +857,13 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		8B8DB5D2268C9FF300501752 /* UserToken.xcdatamodeld */ = {
+		8B1FBF4F268CE77500A61F93 /* UserModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				8B8DB5D3268C9FF300501752 /* TokenUser.xcdatamodel */,
+				8B1FBF50268CE77500A61F93 /* UserModel.xcdatamodel */,
 			);
-			currentVersion = 8B8DB5D3268C9FF300501752 /* TokenUser.xcdatamodel */;
-			path = UserToken.xcdatamodeld;
+			currentVersion = 8B1FBF50268CE77500A61F93 /* UserModel.xcdatamodel */;
+			path = UserModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

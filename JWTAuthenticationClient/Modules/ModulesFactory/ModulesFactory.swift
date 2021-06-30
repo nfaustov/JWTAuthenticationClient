@@ -48,6 +48,13 @@ final class ModulesFactory: Modules {
         return (view, presenter)
     }
 
-    func home() {
+    func home() -> (UIViewController, HomeModule) {
+        let view = HomeViewController()
+        let interactor = HomeInteractor()
+        interactor.authAPI = dependencies.authService
+        interactor.authDatabase = dependencies.authDatabase
+        let presenter = HomePresenter(view: view, interactor: interactor)
+
+        return (view, presenter)
     }
 }

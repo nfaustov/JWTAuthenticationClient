@@ -10,5 +10,5 @@ final class DependencyContainer: HttpServiceDependencies, DatabaseDependencies {
     lazy var authService: AuthAPI = AuthService()
 
     // MARK: - Database
-    lazy var authDatabase: AuthDB = UserAccessDatabase()
+    lazy var authDatabase: AuthDB = UserDatabase()
 }

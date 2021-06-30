@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
     func sceneDidEnterBackground(_ scene: UIScene) {
-        let dataStoreManager = UserAccessDatabase()
+        let dataStoreManager = UserDatabase()
         dataStoreManager.saveContext()
     }
 }

@@ -1,5 +1,5 @@
 //
-//  UserAccessDatabase.swift
+//  UserDatabase.swift
 //  JWTAuthenticationClient
 //
 //  Created by Nikolai Faustov on 30.06.2021.
@@ -8,9 +8,9 @@
 import Foundation
 import CoreData
 
-final class UserAccessDatabase {
+final class UserDatabase {
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "UserToken")
+        let container = NSPersistentContainer(name: "UserModel")
         container.loadPersistentStores(completionHandler: { _, error in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
@@ -36,7 +36,7 @@ final class UserAccessDatabase {
     }
 }
 
-extension UserAccessDatabase: AuthDB {
+extension UserDatabase: AuthDB {
     func saveToken(userToken: UserToken) {
         let userTokenEntity = UserTokenEntity()
         userTokenEntity.accessToken = userToken.accessToken
@@ -46,7 +46,30 @@ extension UserAccessDatabase: AuthDB {
         do {
             try context.save()
         } catch let error {
-            print("Error when saving token: \(error)")
+            print("Error when saving token: \(error.localizedDescription)")
+        }
+    }
+
+    func getToken() -> UserTokenEntity? {
+        let request: NSFetchRequest = UserTokenEntity.fetchRequest()
+
+        guard let token = try? context.fetch(request).first else {
+            print("There is no token in database")
+            return nil
+        }
+
+        return token
+    }
+
+    func saveUser(user: User) {
+        let userEntity = UserEntity()
+        userEntity.id = user.id
+        userEntity.name = user.name
+
+        do {
+            try context.save()
+        } catch let error {
+            print("Error when saving user: \(error.localizedDescription)")
         }
     }
 }

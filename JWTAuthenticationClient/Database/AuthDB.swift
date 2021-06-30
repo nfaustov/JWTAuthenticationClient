@@ -7,4 +7,6 @@
 
 protocol AuthDB {
     func saveToken(userToken: UserToken)
+    func getToken() -> UserTokenEntity?
+    func saveUser(user: User)
 }

@@ -12,5 +12,5 @@ protocol Modules {
     func account() -> (UIViewController, AccountModule)
     func login() -> (UIViewController, LoginModule)
     func signUp() -> (UIViewController, SignUpModule)
-    func home()
+    func home() -> (UIViewController, HomeModule)
 }
