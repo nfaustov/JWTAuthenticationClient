@@ -14,20 +14,6 @@ final class ModulesFactory: Modules {
         self.dependencies = dependencies
     }
 
-    func window(frame: CGRect) -> (UIWindow, WindowModule) {
-        let view = Window(frame: frame)
-        let presenter = WindowPresenter(view: view)
-
-        return (view, presenter)
-    }
-
-    func account() -> (UIViewController, AccountModule) {
-        let view = AccountViewController()
-        let presenter = AccountPresenter(view: view)
-
-        return (view, presenter)
-    }
-
     func login() -> (UIViewController, LoginModule) {
         let view = LoginViewController()
         let interactor = LoginInteractor()

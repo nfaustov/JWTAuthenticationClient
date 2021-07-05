@@ -19,11 +19,7 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-//        let (window, module) = modules.window(frame: UIScreen.main.bounds)
-//        window.rootViewController = navigationController
-//        window.makeKeyAndVisible()
-//        module.coordinator = self
-        accountCoordinator()
+        homeCoordinator()
     }
 
     func childDidFinish(_ child: Coordinator?) {

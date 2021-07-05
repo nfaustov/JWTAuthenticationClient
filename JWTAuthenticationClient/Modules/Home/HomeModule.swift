@@ -6,7 +6,7 @@
 //
 
 protocol HomeModule: AnyObject {
-    var coordinator: HomeCoordinator? { get set }
+    var coordinator: LoginSubscription? { get set }
     var didFinish: (() -> Void)? { get set }
 }
 
@@ -25,5 +25,6 @@ protocol HomeInteraction: Interactor {
 
 protocol HomeInteractorDelegate: AnyObject {
     func didRecievedUserData(_ userData: User)
-    func failedUserData(error: String)
+    func failedTokenValidation(error: String)
+    func noToken()
 }

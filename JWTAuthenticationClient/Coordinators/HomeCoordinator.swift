@@ -20,5 +20,15 @@ final class HomeCoordinator: Coordinator {
     }
 
     func start() {
+        let (viewController, module) = modules.home()
+        module.coordinator = self
+        navigationController.pushViewController(viewController, animated: true)
+    }
+}
+
+extension HomeCoordinator: LoginSubscription {
+    func routeToLogin() {
+        parentCoordinator?.childDidFinish(self)
+        parentCoordinator?.routeToLogin()
     }
 }

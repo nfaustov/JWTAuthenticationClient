@@ -6,7 +6,7 @@
 //
 
 final class HomePresenter<V, I>: PresenterInteractor<V, I>, HomeModule where V: HomeView, I: HomeInteraction {
-    weak var coordinator: HomeCoordinator?
+    weak var coordinator: LoginSubscription?
 
     var didFinish: (() -> Void)?
 }
@@ -22,7 +22,11 @@ extension HomePresenter: HomeInteractorDelegate {
         view?.greetUser(userData)
     }
 
-    func failedUserData(error: String) {
+    func failedTokenValidation(error: String) {
         view?.showError(error: error)
+    }
+
+    func noToken() {
+        coordinator?.routeToLogin()
     }
 }

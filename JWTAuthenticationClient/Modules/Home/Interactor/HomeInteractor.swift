@@ -17,7 +17,7 @@ extension HomeInteractor: HomeInteraction {
     func validateToken() {
         guard let tokenEntity = authDatabase?.getToken(),
               let token = tokenEntity.accessToken else {
-            delegate?.failedUserData(error: "Cannot find access token.")
+            delegate?.noToken()
             return
         }
 
@@ -27,7 +27,7 @@ extension HomeInteractor: HomeInteraction {
                 authDatabase?.saveUser(user: user)
                 delegate?.didRecievedUserData(user)
             },
-            failure: { [delegate] error in delegate?.failedUserData(error: error) }
+            failure: { [delegate] error in delegate?.failedTokenValidation(error: error) }
         )
     }
 }

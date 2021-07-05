@@ -21,10 +21,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let dependencies: (HttpServiceDependencies & DatabaseDependencies) = DependencyContainer()
         let modules = ModulesFactory(dependencies: dependencies)
         let navigationController = UINavigationController()
-        coordinator = MainCoordinator(navigationController: navigationController, modules: modules)
         window = UIWindow(windowScene: windowScene)
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+        coordinator = MainCoordinator(navigationController: navigationController, modules: modules)
         coordinator?.start()
     }
 
