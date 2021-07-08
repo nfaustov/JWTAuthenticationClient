@@ -32,19 +32,8 @@ extension AuthService: AuthAPI {
                     guard response.response?.statusCode == 200 else {
                         do {
                             if let data = response.data {
-                                let authError = try JSONDecoder().decode(SignUpError.self, from: data)
-                                if let nameError = authError.validationErrors.name {
-                                    failure(nameError)
-                                    return
-                                }
-                                if let emailError = authError.validationErrors.email {
-                                    failure(emailError)
-                                    return
-                                }
-                                if let passwordError = authError.validationErrors.password {
-                                    failure(passwordError)
-                                    return
-                                }
+                                let authError = try JSONDecoder().decode(AuthError.self, from: data)
+                                failure(authError.reason)
                             }
                         } catch {
                             print("Sign up parsing failed with error: \(error.localizedDescription)")
@@ -80,22 +69,29 @@ extension AuthService: AuthAPI {
                     guard response.response?.statusCode == 200 else {
                         if let data = response.data {
                             do {
-                                let loginError = try JSONDecoder().decode(LoginError.self, from: data)
-                                failure(loginError.error)
+                                let loginError = try JSONDecoder().decode(AuthError.self, from: data)
+                                failure(loginError.reason)
                             } catch {
-                                print("Login error: \(error)")
+                                print("Login error: \(error.localizedDescription)")
                                 failure("Login failed")
                             }
                         }
                         return
                     }
 
-                    guard let token = response.value as? String else {
-                        print("Login token parding failed")
+                    guard let data = response.data else {
+                        print("Login token parsing failed")
+                        failure("Login token parsing failed")
                         return
                     }
 
-                    success(token)
+                    do {
+                        let token = try JSONDecoder().decode(TokenResponse.self, from: data)
+                        success(token.value)
+                    } catch {
+                        print("Token parsing failed")
+                        failure("Token parsing failed")
+                    }
                 }
         } catch {
             print("Login failed with error: \(error.localizedDescription)")
@@ -116,7 +112,7 @@ extension AuthService: AuthAPI {
                     guard response.response?.statusCode == 200 else {
                         if let data = response.data {
                             do {
-                                let logoutError = try JSONDecoder().decode(ValidationError.self, from: data)
+                                let logoutError = try JSONDecoder().decode(AuthError.self, from: data)
                                 failure(logoutError.reason)
                             } catch {
                                 print("Token validation failed: \(error.localizedDescription)")

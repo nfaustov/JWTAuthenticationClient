@@ -8,7 +8,7 @@
 import Foundation
 
 final class EmailRule: Rule {
-    static let regex = "[A-Z0-9a-z._%+-]+ @[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+    static let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
     private var message: String
 
     init(message: String = "Invalid Email") {

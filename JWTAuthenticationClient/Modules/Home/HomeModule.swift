@@ -26,5 +26,5 @@ protocol HomeInteraction: Interactor {
 protocol HomeInteractorDelegate: AnyObject {
     func didRecievedUserData(_ userData: User)
     func failedTokenValidation(error: String)
-    func noToken()
+    func login()
 }

@@ -38,7 +38,7 @@ final class UserDatabase {
 
 extension UserDatabase: AuthDB {
     func saveToken(userToken: UserToken) {
-        let userTokenEntity = UserTokenEntity()
+        let userTokenEntity = UserTokenEntity(context: context)
         userTokenEntity.accessToken = userToken.accessToken
         userTokenEntity.email = userToken.email
         userTokenEntity.loggedIn = userToken.loggedIn
@@ -62,7 +62,7 @@ extension UserDatabase: AuthDB {
     }
 
     func saveUser(user: User) {
-        let userEntity = UserEntity()
+        let userEntity = UserEntity(context: context)
         userEntity.id = user.id
         userEntity.name = user.name
 

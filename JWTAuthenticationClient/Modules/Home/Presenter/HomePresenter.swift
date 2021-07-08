@@ -26,7 +26,7 @@ extension HomePresenter: HomeInteractorDelegate {
         view?.showError(error: error)
     }
 
-    func noToken() {
+    func login() {
         coordinator?.routeToLogin()
     }
 }

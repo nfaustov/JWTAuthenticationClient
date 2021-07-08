@@ -17,7 +17,7 @@ extension HomeInteractor: HomeInteraction {
     func validateToken() {
         guard let tokenEntity = authDatabase?.getToken(),
               let token = tokenEntity.accessToken else {
-            delegate?.noToken()
+            delegate?.login()
             return
         }
 

@@ -22,7 +22,7 @@ final class AccountCoordinator: Coordinator {
     func start() {
         let (viewController, module) = modules.login()
         module.coordinator = self
-        navigationController.pushViewController(viewController, animated: true)
+        navigationController.setViewControllers([viewController], animated: true)
     }
 }
 
