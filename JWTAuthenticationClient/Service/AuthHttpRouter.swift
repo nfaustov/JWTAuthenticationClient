@@ -44,9 +44,14 @@ extension AuthHttpRouter: HttpRouter {
 
     var headers: HTTPHeaders? {
         switch self {
-        case .login, .signUp:
+        case .signUp:
             return [
                 "Content-Type": "application/json; charset=UTF-8"
+            ]
+        case .login(let user):
+            let base64EncodedString = "\(user.email):\(user.password)".toBase64()
+            return [
+                "Authorization": "Basic \(base64EncodedString)"
             ]
         case .validate(let token):
             return [
@@ -62,5 +67,11 @@ extension AuthHttpRouter: HttpRouter {
         case .validate:
             return nil
         }
+    }
+}
+
+extension String {
+    func toBase64() -> String {
+        Data(self.utf8).base64EncodedString()
     }
 }

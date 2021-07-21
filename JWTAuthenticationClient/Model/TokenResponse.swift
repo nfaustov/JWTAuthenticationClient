@@ -8,9 +8,5 @@
 import Foundation
 
 struct TokenResponse: Codable {
-    enum CodingKeys: String, CodingKey {
-        case value = "token"
-    }
-
     let value: String
 }
